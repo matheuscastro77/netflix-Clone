@@ -2,15 +2,16 @@ const API_KEY = "616cfb92d261941ae48546aaa14fd434";
 const API_BASE = "https://api.themoviedb.org/3";
 
 const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTZjZmI5MmQyNjE5NDFhZTQ4NTQ2YWFhMTRmZDQzNCIsInN1YiI6IjY1NDE4MThjNDFhNTYxMDBkZGE5NjY0OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FnVJ-LVBPS-LQLRgSCBNmahJtGIrvZ7E2IlZQBcYYwg'
-    }
-  };
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MTZjZmI5MmQyNjE5NDFhZTQ4NTQ2YWFhMTRmZDQzNCIsInN1YiI6IjY1NDE4MThjNDFhNTYxMDBkZGE5NjY0OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FnVJ-LVBPS-LQLRgSCBNmahJtGIrvZ7E2IlZQBcYYwg",
+  },
+};
 
 const basicFetch = async (endpoint) => {
-  const req = await fetch(`${API_BASE}${endpoint}`,  options);
+  const req = await fetch(`${API_BASE}${endpoint}`, options);
   const json = await req.json();
   return json;
 };
@@ -23,18 +24,11 @@ export default {
         slug: "trending",
         title: "Em alta",
         items: await basicFetch(
-          `/trending/all/week?&language=pt-BR&api_key=${API_KEY}`,
+          `/trending/all/week?&language=pt-BR&api_key=${API_KEY}`
         ),
         isLarge: true,
       },
-      {
-        slug: "originals",
-        title: "Originais Netflix",
-        items: await basicFetch(
-          `/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`
-        ),
-        isLarge: false,
-      },
+
       {
         slug: "toprated",
         title: "Populares",
@@ -56,6 +50,14 @@ export default {
         title: "Romance",
         items: await basicFetch(
           `/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`
+        ),
+        isLarge: false,
+      },
+      {
+        slug: "originals",
+        title: "Originais Netflix",
+        items: await basicFetch(
+          `/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`
         ),
         isLarge: false,
       },
@@ -87,7 +89,6 @@ export default {
   },
 
   getMovieInfo: async (movieId, type) => {
-
     let info = {};
 
     if (movieId) {
@@ -111,11 +112,7 @@ export default {
     return info;
   },
 
-
   //   getRatingContent : async (id) => {
 
   //   }
 };
-
-
-  

@@ -21,28 +21,27 @@ export default function App() {
       );
       let chosen = originals[0].items.results[randomChosen];
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
-      console.log(chosenInfo);
       setFeaturedData(chosenInfo);
     };
 
     loadAll();
   }, []);
 
-  useEffect (() => {
+  useEffect(() => {
     const scrollListener = () => {
-      if(window.scrollY > 30) {
-        setVisibleHeader(true)
+      if (window.scrollY > 30) {
+        setVisibleHeader(true);
       } else {
-        setVisibleHeader(false)
+        setVisibleHeader(false);
       }
-    }
+    };
 
-    window.addEventListener('scroll', scrollListener)
+    window.addEventListener("scroll", scrollListener);
 
-    return () =>  {
-      window.removeEventListener('scroll', scrollListener)
-    }
-  }, [])
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
 
   return (
     <div className="page">
@@ -51,21 +50,41 @@ export default function App() {
 
       <section className="lists">
         {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} items={item.items} isLarge={item.isLarge}/>
+          <MovieRow
+            key={key}
+            title={item.title}
+            items={item.items}
+            isLarge={item.isLarge}
+          />
         ))}
       </section>
 
       <footer>
-        Feito com carinho por <a href="https://fun-portfolio-five.vercel.app/" target="_blank" rel="noreferrer"> Matheus Castro </a> <br/>
-        Direitos de imagem para Netflix<br/>
+        Feito com carinho por{" "}
+        <a
+          href="https://fun-portfolio-five.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {" "}
+          Matheus Castro{" "}
+        </a>{" "}
+        <br />
+        Direitos de imagem para Netflix
+        <br />
         Dados de API do site Themoviedb.org
       </footer>
 
-      {movieList.length <= 0 ?       <div className="loading">
-        <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="carregando"></img>
-      </div> : ''}
-
-
+      {movieList.length <= 0 ? (
+        <div className="loading">
+          <img
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+            alt="carregando"
+          ></img>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
