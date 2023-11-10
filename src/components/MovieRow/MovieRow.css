@@ -161,7 +161,7 @@
 }
 
 .buttonCloneModal:hover {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 .container--button {
@@ -185,6 +185,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: all ease 0.5s;
 }
 
 .button--like {
@@ -193,6 +194,13 @@
     color: #fff;
     border-radius: 50%;
     padding: 8px 8px;
+    transition: all ease 0.5s;
+}
+
+.playButton:hover,
+.button--like:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .infos--tittle {
