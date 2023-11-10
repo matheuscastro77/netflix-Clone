@@ -1,5 +1,5 @@
 <h2 align="center"> 
-	Netflix Clone
+	Netflix Clone With Trailers
 </h2>
 
 ## Individual project
