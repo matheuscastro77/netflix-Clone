@@ -17,18 +17,18 @@ header {
     background-color: #141414;
 }
 
-.header--logo{
+.header--logo {
     height: 30px;
 }
 
-.header--logo img{
+.header--logo img {
     height: 100%;
 }
 
-.header--user{
+.header--user {
     height: 35px;
 }
 
-.header--user img{
+.header--user img {
     height: 100%;
 }

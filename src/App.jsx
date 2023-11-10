@@ -60,7 +60,7 @@ export default function App() {
       </section>
 
       <footer>
-        Feito com carinho por{" "}
+        Feito por{" "}
         <a
           href="https://fun-portfolio-five.vercel.app/"
           target="_blank"

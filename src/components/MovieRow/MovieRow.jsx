@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./MovieRow.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
@@ -162,8 +162,8 @@ const MovieRow = ({ title, items, isLarge }) => {
 
               <h2 className="infos--tittle">{itemName}</h2>
               <p className="infos--overview">
-                {itemOverview.length > 350
-                  ? itemOverview.substring(0, 350) + "..."
+                {itemOverview.length > 800
+                  ? itemOverview.substring(0, 800) + "..."
                   : itemOverview}
               </p>
             </div>
