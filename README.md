@@ -5,7 +5,7 @@
 ## Individual project
 
 ## Link
-[Link](https://netflix-clone-3cp6.vercel.app/)
+[Link](https://netflix-clone-with-trailer.vercel.app/)
 
 ## Not mobile responsive.
 
