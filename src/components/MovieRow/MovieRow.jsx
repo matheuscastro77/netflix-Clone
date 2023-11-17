@@ -74,22 +74,6 @@ const MovieRow = ({ title, items, isLarge }) => {
     setModal(false);
   };
 
-  // useEffect(() => {
-  //   const style = document.createElement("style");
-  //   style.innerHTML = `
-  //     @media (max-width: 767px) {
-  //       html {
-  //         pointer-events: none;
-  //       }
-  //     }
-  //   `;
-  //   document.head.appendChild(style);
-
-  //   return () => {
-  //     document.head.removeChild(style);
-  //   };
-  // }, []);
-
   return (
     <>
       <div className="movieRow">
@@ -105,7 +89,7 @@ const MovieRow = ({ title, items, isLarge }) => {
             }}
           >
             <div
-              className={`movieRow--left ${isLarge && "movie-card-large1"}`}
+              className={`movieRow--left ${isLarge && "movie-card-large"}`}
               onClick={handleLeftArrow}
               style={{ opacity: scrollX === 0 ? 0 : movieRowOpacity }}
             >

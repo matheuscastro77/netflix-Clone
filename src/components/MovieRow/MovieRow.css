@@ -8,7 +8,7 @@
 }
 
 .movieRow--listarea {
-    overflow-x: hidden;
+    overflow-x: scroll;
     padding-left: 30px;
 }
 
@@ -26,11 +26,10 @@
 
 .row-cards {
     display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
     padding: 0 10px;
     transition: all ease 0.5s;
     align-items: center;
+    overflow: hidden;
 }
 
 .row-cards::-webkit-scrollbar {
@@ -55,6 +54,7 @@
     height: 350px;
     transform: scale(0.95);
     transition: all ease 0.2s;
+
 }
 
 .movie-card-large img {
@@ -243,5 +243,12 @@
 
     .modal--container {
         pointer-events: none;
+    }
+
+    .movie-card-large {
+        width: 90vw;
+        height: 270px;
+        transform: scale(0.95);
+        transition: all ease 0.2s;
     }
 }
