@@ -278,7 +278,7 @@
         margin-top: 20%;
         background-color: #111;
         z-index: 20;
-        height: 80vh;
+        max-height: 80vh;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -317,7 +317,7 @@
         z-index: 21;
         margin-left: 5%;
         width: 80%;
-        margin-top: 52vh;
+        margin-top: 48vh;
         display: flex;
         justify-content: space-between;
         align-items: center;

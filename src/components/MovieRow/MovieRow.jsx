@@ -126,9 +126,7 @@ const MovieRow = ({ title, items, isLarge }) => {
               className={`modal--content ${modal ? "animateIn" : "animateOut"}`}
             >
               <div className="obs--container">
-                <p className="obs">
-                  React Player não funciona em dispositivo móvel.
-                </p>
+                <p className="obs">Vídeo indisponível ? Tente outro.</p>
 
                 <button
                   className="buttonCloneModal"
@@ -160,8 +158,8 @@ const MovieRow = ({ title, items, isLarge }) => {
 
               <h2 className="infos--tittle">{itemName}</h2>
               <p className="infos--overview">
-                {itemOverview.length > 500
-                  ? itemOverview.substring(0, 500) + "..."
+                {itemOverview.length > 345
+                  ? itemOverview.substring(0, 345) + "..."
                   : itemOverview}
               </p>
             </div>
