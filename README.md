@@ -7,7 +7,7 @@
 ## Link
 [Link](https://netflix-clone-with-trailer.vercel.app/)
 
-## Not mobile responsive.
+## Mobile responsive.
 
 ## Website
 ## 1
