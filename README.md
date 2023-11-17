@@ -19,7 +19,7 @@
 
 ## List with language, framework and/or technologies used
 <ul>
-	<li>HTML, CSS AND JAVASCRIPT</li>
+	<li>HTML, SCSS AND JAVASCRIPT</li>
 	<li>React</li>
 	<li>Material-UI</li>
 </ul>
