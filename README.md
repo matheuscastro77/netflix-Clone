@@ -5,7 +5,7 @@
 ## Individual project
 
 ## Link
-[Link](https://netflix-clone-3cp6.vercel.app/)
+[Link](https://netflix-clone-with-trailer.vercel.app/)
 
 ## Not mobile responsive.
 
@@ -19,9 +19,10 @@
 
 ## List with language, framework and/or technologies used
 <ul>
-	<li>HTML, CSS AND JAVASCRIPT</li>
+	<li>HTML, SCSS AND JAVASCRIPT</li>
 	<li>React</li>
 	<li>Material-UI</li>
+	<li>Movie Trailer and React Player</li>
 </ul>
  
 ## IDE
