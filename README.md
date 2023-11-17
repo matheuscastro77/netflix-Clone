@@ -22,6 +22,7 @@
 	<li>HTML, SCSS AND JAVASCRIPT</li>
 	<li>React</li>
 	<li>Material-UI</li>
+	<li>Movie Trailer and React Player</li>
 </ul>
  
 ## IDE
