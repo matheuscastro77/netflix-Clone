@@ -89,7 +89,7 @@ const MovieRow = ({ title, items, isLarge }) => {
             }}
           >
             <div
-              className={`movieRow--left ${isLarge && "movie-card-large"}`}
+              className={"movieRow--left"}
               onClick={handleLeftArrow}
               style={{ opacity: scrollX === 0 ? 0 : movieRowOpacity }}
             >
@@ -125,10 +125,24 @@ const MovieRow = ({ title, items, isLarge }) => {
             <div
               className={`modal--content ${modal ? "animateIn" : "animateOut"}`}
             >
-              <button className="buttonCloneModal" onClick={() => closeModal()}>
-                <CloseIcon fontSize="large" />
-              </button>
-              <ReactPlayer playing={true} url={trailerUrl} />
+              <div className="obs--container">
+                <p className="obs">
+                  React Player não funciona em dispositivo móvel.
+                </p>
+
+                <button
+                  className="buttonCloneModal"
+                  onClick={() => closeModal()}
+                >
+                  <CloseIcon fontSize="large" />
+                </button>
+              </div>
+              <ReactPlayer
+                playing={true}
+                url={trailerUrl}
+                width="100%"
+                playsinline
+              />
               <div className="container--button">
                 <button className="playButton">
                   <PlayArrowIcon /> Play
@@ -146,8 +160,8 @@ const MovieRow = ({ title, items, isLarge }) => {
 
               <h2 className="infos--tittle">{itemName}</h2>
               <p className="infos--overview">
-                {itemOverview.length > 800
-                  ? itemOverview.substring(0, 800) + "..."
+                {itemOverview.length > 500
+                  ? itemOverview.substring(0, 500) + "..."
                   : itemOverview}
               </p>
             </div>

@@ -29,7 +29,6 @@
     padding: 0 10px;
     transition: all ease 0.5s;
     align-items: center;
-    overflow: hidden;
 }
 
 .row-cards::-webkit-scrollbar {
@@ -164,6 +163,17 @@
     transform: scale(1.1);
 }
 
+.obs {
+    display: none;
+
+}
+
+.obs--container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .container--button {
     position: absolute;
     z-index: 21;
@@ -246,9 +256,93 @@
     }
 
     .movie-card-large {
-        width: 90vw;
+        width: 85vw;
         height: 270px;
         transform: scale(0.95);
         transition: all ease 0.2s;
+        overflow-x: visible;
     }
+
+    .movie-card:hover {
+        transform: scale(0.9);
+
+    }
+
+    .movie-card-large:hover {
+        transform: scale(0.95);
+    }
+
+    .modal--content {
+        border-radius: 3%;
+        width: 80%;
+        margin-top: 20%;
+        background-color: #111;
+        z-index: 20;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+
+        &.animateIn {
+            pointer-events: all;
+            animation: modalIn 0.5s ease forwards;
+        }
+
+        &.animateOut {
+            animation: modalOut 0.5s ease forwards;
+        }
+
+    }
+
+    .infos--overview {
+        font-size: 12px;
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .infos--tittle {
+        font-size: 18px;
+        left: 10%;
+    }
+
+    .movieRow--left,
+    .movieRow--right {
+        display: none;
+    }
+
+    .container--button {
+        z-index: 21;
+        margin-left: 5%;
+        width: 80%;
+        margin-top: 48vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .playButton {
+        color: #111;
+    }
+
+    .playButton:hover,
+    .button--like:hover {
+        transform: scale(1);
+    }
+
+    .button--like {
+        height: 40px;
+    }
+
+    .obs {
+        display: flex;
+        border: 2px solid red;
+        background: transparent;
+        border: 0px;
+        color: #fff;
+        padding: 10px;
+    }
+
 }

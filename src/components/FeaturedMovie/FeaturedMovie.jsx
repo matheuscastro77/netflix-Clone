@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeaturedMovie.css";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const FeaturedMovie = ({ item }) => {
   let firstDate = new Date(item.first_air_date);
@@ -38,7 +39,7 @@ const FeaturedMovie = ({ item }) => {
           <div className="featured--description">{description}</div>
           <div className="featured-buttons">
             <a href={`/watch/${item.id}`} className="feature--watchbutton">
-              ▶ Assistir
+              <PlayArrowIcon /> Assistir
             </a>
             <a href={`/list/add/${item.id}`} className="featured--mylistbutton">
               + Minha Lista
